@@ -1,4 +1,4 @@
-type Error = {
+type ErrorState = {
     isActive: boolean;
     errCode: string;
     errMsg: string;

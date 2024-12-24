@@ -18,7 +18,7 @@ const App: React.FC<AppProps> = () => {
   const [firstLoad, setFirstLoad] = useState<boolean>(true);
   const [query, setQuery] = useState<string>("");
   const [perPage, setPerPage] = useState<number>(10);
-  const [error, setError] = useState<Error>({
+  const [error, setError] = useState<ErrorState>({
     isActive: false,
     errCode: "",
     errMsg: "",
