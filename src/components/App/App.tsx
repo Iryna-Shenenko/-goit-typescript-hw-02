@@ -47,19 +47,20 @@ const App: React.FC<AppProps> = () => {
   };
   useEffect(() => {
     if (!query) return;
-    (async () => {
+
+    const fetchData = async(): Promise<void> => {
       try {
         setLoader(true);
         setError({ isActive: false, errCode: "", errMsg: "" });
         setTotalPages(0);
+
         const data: ApiResponse = await fetchImages(query, perPage, page);
         if (pagination) {
           setResults((prev) => [...prev, ...data.results]);
-          setTotalPages(data.total_pages);
-          return;
-        }
+         } else { setResults(data.results);
+
+         }
         setTotalPages(data.total_pages);
-        setResults(data.results);
       } catch (err: any) {
         setError({
           isActive: true,
@@ -70,7 +71,8 @@ const App: React.FC<AppProps> = () => {
         setLoader(false);
         setFirstLoad(false);
       }
-    })();
+    };
+    fetchData();
   }, [query, page, pagination, perPage]);
 
   return (
