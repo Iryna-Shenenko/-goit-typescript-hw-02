@@ -9,4 +9,4 @@ type Error = {
     results: Image[];
     total_pages: number;
   }
-
+ type AppProps = {}
