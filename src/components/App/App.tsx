@@ -7,7 +7,10 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "../loadMoreBtn/loadMoreBtn";
 import ImageModal from "../ImageModal/ImageModal";
 
+import  Modal  from 'react-modal';
+
 const App: React.FC<AppProps> = () => {
+  Modal.setAppElement("#root")
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
   const [page, setPage] = useState<number>(1);
