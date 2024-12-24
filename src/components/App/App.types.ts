@@ -10,4 +10,3 @@ type Error = {
     total_pages: number;
   }
 
-  type AppProps {}
