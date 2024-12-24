@@ -10,3 +10,9 @@ type ErrorState = {
     total_pages: number;
   }
  type AppProps = {}
+
+
+ interface Image {
+  id: string;
+  url: string;
+  alt_description: string;}
