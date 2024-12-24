@@ -1,0 +1,2 @@
+interface LoadMoreBtnProps {
+    handleLoadMore: () => void;}

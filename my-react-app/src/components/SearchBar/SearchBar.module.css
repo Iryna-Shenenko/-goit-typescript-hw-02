@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+}
+.text {
+    font-family: inherit;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 55px;
+  outline: transparent;
+  border: 2px solid transparent;
+  font-size: 14px;
+}
+
+.button {
+    border: 1px solid black;
+    min-height: 40px;
+    
+}
+.form {
+    padding: 0 10px;
+  display: flex;
+  min-height: 50px;
+
+  border: 1px solid transparent;
+  background: #fff;
+  box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
+  border-radius: 24px;
+  overflow: hidden;
+  &:hover {
+    box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
+  }
+}

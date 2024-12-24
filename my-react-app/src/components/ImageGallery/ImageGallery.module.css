@@ -1,0 +1,20 @@
+.list {
+    margin: 0  auto;
+    padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.listItem {
+    min-width: 360px;
+    min-height: 200px;
+    border: 1px solid #808080;
+    overflow: hidden;
+    transition: border 300ms ease;
+}
+.listItem:hover {
+    border: 1px solid black;
+}
