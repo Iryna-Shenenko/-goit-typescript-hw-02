@@ -3,31 +3,6 @@ import axios from "axios";
 const key = "HD8a7nzqSCIuZgWulcZb4uNBftEJwJewIYNsf0KFCJg";
 axios.defaults.baseURL = "https://api.unsplash.com/";
 
-type  FetchImagesParams = {
-  query: string;
-  per_page: number;
-  page: number;
-}
-
-
-type  Image = {
-  id: string;
-  urls: {
-    small: string;
-    regular: string;
-    full: string;
-  };
-  alt_description: string | null;
-  description: string | null;
-}
-
-
-type FetchImagesResponse = {
-  results: Image[];
-  total_pages: number;
-  total: number;
-}
-
 
 const fetchImages = async (
   query: string,
