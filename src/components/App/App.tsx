@@ -41,8 +41,7 @@ const App: React.FC<AppProps> = () => {
     setPagination(true);
   };
 
-  const handleQuery = (query: string, perPage: number): void => {
- if (perPage > 0) setPerPage(perPage);
+  const handleQuery = (query: string): void => {
     setFirstLoad(true);
     setQuery(query);
     setPagination(false);
