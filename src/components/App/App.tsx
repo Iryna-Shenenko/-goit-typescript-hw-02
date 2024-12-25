@@ -41,8 +41,8 @@ const App: React.FC<AppProps> = () => {
     setPagination(true);
   };
 
-  const handleQuery = (query: string, perPage: number): void => {
-    if (perPage !== "") setPerPage(perPage);
+  const handleQuery = (query: string): void => {
+ const defaultPerPage = 10;
     setFirstLoad(true);
     setQuery(query);
     setPagination(false);
@@ -88,7 +88,7 @@ const App: React.FC<AppProps> = () => {
       ) : (
         <h2>Image not Found ...</h2>
       )}
-      {error.isActive && <ErrorMessage massage={error.errMsg} />}
+      {error.isActive && <ErrorMessage message={error.errMsg} />}
       {loader && <Loader />}
       {page < totalPages && <LoadMoreBtn handleLoadMore={handleLoadMore} />}
       <ImageModal
