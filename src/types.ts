@@ -32,7 +32,7 @@ type ImageGalleryProps = {
     handleModal: (image: Image) => void;}
 
 
-    type ImageModalProps = {
+type ImageModalProps = {
         isOpen: boolean;
         onRequestClose: () => void;
         selectedImage: Image | null;
@@ -51,4 +51,12 @@ type ImageGalleryProps = {
             total_pages: number;
             total: number;
           }
-          
+          type SearchBarProps = {
+            handleQuery: (query: string) => void;
+            query: string;
+            id: string;
+        }
+
+        type ErrorMessageProps = {
+            message: string;
+        }

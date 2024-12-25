@@ -3,10 +3,6 @@ import React, {FormEvent} from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 
-interface SearchBarProps {
-    handleQuery: (query: string) => void;
-}
-
 const SearchBar: React.FC<SearchBarProps> = ({handleQuery}) => {
   const createQuery = (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault();

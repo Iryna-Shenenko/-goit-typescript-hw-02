@@ -41,8 +41,8 @@ const App: React.FC<AppProps> = () => {
     setPagination(true);
   };
 
-  const handleQuery = (query: string): void => {
- const defaultPerPage = 10;
+  const handleQuery = (query: string, perPage: number): void => {
+ if (perPage > 0) setPerPage(perPage);
     setFirstLoad(true);
     setQuery(query);
     setPagination(false);
@@ -88,13 +88,13 @@ const App: React.FC<AppProps> = () => {
       ) : (
         <h2>Image not Found ...</h2>
       )}
-      {error.isActive && <ErrorMessage message={error.errMsg} />}
+      {error.isActive && <ErrorMessage message = {error.errMsg} />}
       {loader && <Loader />}
       {page < totalPages && <LoadMoreBtn handleLoadMore={handleLoadMore} />}
       <ImageModal
         isOpen={isModalOpen}
         onRequestClose={toggleIsOpen}
-        selectedImage={selectedImage!} // 'selectedImage' гарантовано не null при відкритті модалки
+        selectedImage={selectedImage!} 
       />
     </div>
   );
